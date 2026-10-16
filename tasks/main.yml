@@ -6,7 +6,7 @@
     path: "{{ item }}"
     owner: "{{ adminer_owner }}"
     group: "{{ adminer_group }}"
-    mode: u=rw,g=r,o=r
+    mode: u=rwx,g=r,o=r
     state: directory
   tags:
     - adminer
@@ -41,6 +41,7 @@
     owner: "{{ adminer_owner }}"
     group: "{{ adminer_group }}"
     mode: u=rwx,g=r,o=r
+    force: true
   tags:
     - adminer
 
@@ -56,6 +57,7 @@
     owner: "{{ adminer_owner }}"
     group: "{{ adminer_group }}"
     mode: u=rwx,g=r,o=r
+    force: true
   tags:
     - adminer
 
@@ -80,5 +82,4 @@
     mode: u=rwx,g=r,o=r
   tags:
     - adminer
-
 ...
