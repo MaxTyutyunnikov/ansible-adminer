@@ -2,6 +2,7 @@
 - name: Create required directories
   loop:
     - /usr/share/adminer
+    - "{{ adminer_destination | dirname }}"
   ansible.builtin.file:
     path: "{{ item }}"
     owner: "{{ adminer_owner }}"
