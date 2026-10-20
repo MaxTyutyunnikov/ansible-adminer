@@ -14,7 +14,7 @@
 - name: Install required packages
   loop: "{{ (adminer_mysql_packages if adminer_mysql else adminer_general_packages) + adminer_extra_packages }}"
   notify:
-    - Restart apache
+    - Reload nginx
   ansible.builtin.package:
     name: "{{ item }}"
     state: present
@@ -24,7 +24,7 @@
 - name: Write php config
   loop: "{{ adminer_php_paths }}"
   notify:
-    - Restart apache
+    - Reload nginx
   ansible.builtin.template:
     src: php.j2
     dest: "{{ item }}"
