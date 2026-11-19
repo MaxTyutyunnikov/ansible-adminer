@@ -18,12 +18,12 @@ adminer_mysql_packages:
   - php-mysql
 
 # @var adminer_general_packages:description: List of packages for general databases
-adminer_general_packages:
-  - php
-  - php-mysql
-  - php-sqlite3
-  - php-pgsql
-  - php-mongodb
+adminer_general_packages: []
+  #- php
+  #- php-mysql
+  #- php-sqlite3
+  #- php-pgsql
+  #- php-mongodb
 
 # @var adminer_extra_packages:description: List of extra packages to install
 adminer_extra_packages: []
@@ -83,7 +83,7 @@ adminer_max_upload_size: 256M
 
 # @var adminer_php_versions:description: Mapping of the available PHP versions on Ubuntu
 adminer_php_versions:
-  "18.04": 7.2
+  "18.04": 7.4
   "20.04": 7.4
   "22.04": 8.1
   "24.04": 8.3
